@@ -1,0 +1,7 @@
+.idea\*
+node_modules\*
+*.log
+RETOUR\*
+build\147692\*
+dist/*
+build/Easy*

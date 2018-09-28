@@ -1,0 +1,4 @@
+--webpack-config .electron-vue/webpack.main.config.js
+--reporter list
+--timeout 0
+#--watch

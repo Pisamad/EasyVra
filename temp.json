@@ -1,0 +1,4588 @@
+
+
+catalog-service/api/consumer/entitledCatalogItems/42268c4c-db1f-4167-bf4c-dd314b97ac98/requests/schema
+                              {
+  "fields": [
+    {
+      "id": "__nsx.management_endpoint_name",
+      "label": null,
+      "description": null,
+      "dataType": {
+        "type": "primitive",
+        "typeId": "STRING"
+      },
+      "displayAdvice": null,
+      "orderIndex": null,
+      "permissibleValues": null,
+      "state": {
+        "dependencies": [],
+        "facets": [
+          {
+            "type": "mandatory",
+            "value": {
+              "type": "constant",
+              "value": {
+                "type": "boolean",
+                "value": false
+              }
+            }
+          },
+          {
+            "type": "visible",
+            "value": {
+              "type": "constant",
+              "value": {
+                "type": "boolean",
+                "value": false
+              }
+            }
+          },
+          {
+            "type": "derivedValue",
+            "value": {
+              "type": "constant",
+              "value": {
+                "type": "string",
+                "value": "vCenter01"
+              }
+            }
+          },
+          {
+            "type": "encrypted",
+            "value": {
+              "type": "constant",
+              "value": {
+                "type": "boolean",
+                "value": false
+              }
+            }
+          }
+        ]
+      },
+      "isMultiValued": false,
+      "columns": null
+    },
+    {
+      "id": "__nsx.edge_reservation_policy",
+      "label": null,
+      "description": null,
+      "dataType": {
+        "type": "primitive",
+        "typeId": "STRING"
+      },
+      "displayAdvice": null,
+      "orderIndex": null,
+      "permissibleValues": null,
+      "state": {
+        "dependencies": [],
+        "facets": [
+          {
+            "type": "mandatory",
+            "value": {
+              "type": "constant",
+              "value": {
+                "type": "boolean",
+                "value": false
+              }
+            }
+          },
+          {
+            "type": "visible",
+            "value": {
+              "type": "constant",
+              "value": {
+                "type": "boolean",
+                "value": false
+              }
+            }
+          },
+          {
+            "type": "derivedValue",
+            "value": {
+              "type": "constant",
+              "value": {
+                "type": "string",
+                "value": "VDI-RP"
+              }
+            }
+          },
+          {
+            "type": "encrypted",
+            "value": {
+              "type": "constant",
+              "value": {
+                "type": "boolean",
+                "value": false
+              }
+            }
+          }
+        ]
+      },
+      "isMultiValued": false,
+      "columns": null
+    },
+    {
+      "id": "__nsx.transport_zone_name",
+      "label": null,
+      "description": null,
+      "dataType": {
+        "type": "primitive",
+        "typeId": "STRING"
+      },
+      "displayAdvice": null,
+      "orderIndex": null,
+      "permissibleValues": null,
+      "state": {
+        "dependencies": [],
+        "facets": [
+          {
+            "type": "mandatory",
+            "value": {
+              "type": "constant",
+              "value": {
+                "type": "boolean",
+                "value": false
+              }
+            }
+          },
+          {
+            "type": "visible",
+            "value": {
+              "type": "constant",
+              "value": {
+                "type": "boolean",
+                "value": false
+              }
+            }
+          },
+          {
+            "type": "derivedValue",
+            "value": {
+              "type": "constant",
+              "value": {
+                "type": "string",
+                "value": "TZ_Prod"
+              }
+            }
+          },
+          {
+            "type": "encrypted",
+            "value": {
+              "type": "constant",
+              "value": {
+                "type": "boolean",
+                "value": false
+              }
+            }
+          }
+        ]
+      },
+      "isMultiValued": false,
+      "columns": null
+    },
+    {
+      "id": "_leaseDays",
+      "label": "Lease days",
+      "description": "Indicates for how many days the deployed blueprint will be leased.",
+      "dataType": {
+        "type": "primitive",
+        "typeId": "INTEGER"
+      },
+      "displayAdvice": null,
+      "orderIndex": null,
+      "permissibleValues": null,
+      "state": {
+        "dependencies": [],
+        "facets": [
+          {
+            "type": "visible",
+            "value": {
+              "type": "constantClause",
+              "value": {
+                "type": "boolean",
+                "value": true
+              }
+            }
+          }
+        ]
+      },
+      "isMultiValued": false,
+      "columns": null
+    },
+    {
+      "id": "vSphere__vCenter__Machine_1",
+      "label": "vSphere__vCenter__Machine_1",
+      "description": null,
+      "dataType": {
+        "type": "complex",
+        "componentTypeId": "com.vmware.csp.component.cafe.composition",
+        "componentId": null,
+        "classId": "Blueprint.Component.Declaration",
+        "typeFilter": "WindowsWorkstation*vSphere__vCenter__Machine_1",
+        "label": "Windows Workstation.vSphere__vCenter__Machine_1",
+        "schema": {
+          "fields": [
+            {
+              "id": "source_machine",
+              "label": "Clone from",
+              "description": "The source virtual machine to clone from. This has to be virtual machine template if snapshot is not specified else it has to be a virtual machine.",
+              "dataType": {
+                "type": "ref",
+                "componentTypeId": "com.vmware.csp.iaas.blueprint.service",
+                "componentId": null,
+                "classId": "Infrastructure.Virtual.Schema",
+                "typeFilter": null,
+                "label": null
+              },
+              "displayAdvice": "SEARCHER",
+              "orderIndex": null,
+              "permissibleValues": {
+                "type": "dynamic",
+                "customAllowed": false,
+                "context": null,
+                "dependencies": [
+                  "vSphere__vCenter__Machine_1~action"
+                ]
+              },
+              "state": {
+                "dependencies": [],
+                "facets": [
+                  {
+                    "type": "visible",
+                    "value": {
+                      "type": "constantClause",
+                      "value": {
+                        "type": "boolean",
+                        "value": false
+                      }
+                    }
+                  },
+                  {
+                    "type": "defaultValue",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "entityRef",
+                        "classId": "Infrastructure.Virtual.Schema",
+                        "id": "4dbbc985-cc3f-4cb4-bb66-0316490d23e3",
+                        "componentId": null,
+                        "label": "WIN10-WKS-TPL"
+                      }
+                    }
+                  }
+                ]
+              },
+              "isMultiValued": false,
+              "columns": null
+            },
+            {
+              "id": "blueprint_type",
+              "label": "Blueprint type",
+              "description": "Specifies whether machines provisioned from this blueprint are classified as Desktop or Server",
+              "dataType": {
+                "type": "primitive",
+                "typeId": "STRING"
+              },
+              "displayAdvice": null,
+              "orderIndex": 1,
+              "permissibleValues": {
+                "type": "static",
+                "customAllowed": false,
+                "values": [
+                  {
+                    "underlyingValue": {
+                      "type": "string",
+                      "value": "0"
+                    },
+                    "label": "Desktop"
+                  },
+                  {
+                    "underlyingValue": {
+                      "type": "string",
+                      "value": "1"
+                    },
+                    "label": "Server"
+                  }
+                ]
+              },
+              "state": {
+                "dependencies": [],
+                "facets": [
+                  {
+                    "type": "readOnly",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "boolean",
+                        "value": true
+                      }
+                    }
+                  },
+                  {
+                    "type": "mandatory",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "boolean",
+                        "value": true
+                      }
+                    }
+                  },
+                  {
+                    "type": "defaultValue",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "string",
+                        "value": "0"
+                      }
+                    }
+                  },
+                  {
+                    "type": "visible",
+                    "value": {
+                      "type": "constantClause",
+                      "value": {
+                        "type": "boolean",
+                        "value": false
+                      }
+                    }
+                  },
+                  {
+                    "type": "derivedValue",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "string",
+                        "value": "0"
+                      }
+                    }
+                  }
+                ]
+              },
+              "isMultiValued": false,
+              "columns": null
+            },
+            {
+              "id": "ovf_use_proxy",
+              "label": "Use proxy",
+              "description": null,
+              "dataType": {
+                "type": "primitive",
+                "typeId": "BOOLEAN"
+              },
+              "displayAdvice": "CHECKBOX",
+              "orderIndex": 8,
+              "permissibleValues": null,
+              "state": {
+                "dependencies": [],
+                "facets": [
+                  {
+                    "type": "visible",
+                    "value": {
+                      "type": "constantClause",
+                      "value": {
+                        "type": "boolean",
+                        "value": false
+                      }
+                    }
+                  },
+                  {
+                    "type": "defaultValue",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "boolean",
+                        "value": false
+                      }
+                    }
+                  }
+                ]
+              },
+              "isMultiValued": false,
+              "columns": null
+            },
+            {
+              "id": "reservation_policy",
+              "label": "Reservation policy",
+              "description": "Optional Reservation policy to further constrain the matching reservations for this blueprint.",
+              "dataType": {
+                "type": "ref",
+                "componentTypeId": "com.vmware.csp.iaas.blueprint.service",
+                "componentId": null,
+                "classId": "Infrastructure.Reservation.Policy.ComputeResource",
+                "typeFilter": null,
+                "label": null
+              },
+              "displayAdvice": "DROPDOWN",
+              "orderIndex": null,
+              "permissibleValues": {
+                "type": "dynamic",
+                "customAllowed": false,
+                "context": null,
+                "dependencies": []
+              },
+              "state": {
+                "dependencies": [],
+                "facets": [
+                  {
+                    "type": "defaultValue",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "entityRef",
+                        "classId": "Infrastructure.Reservation.Policy.ComputeResource",
+                        "id": "VDI-RP",
+                        "componentId": null,
+                        "label": "VDI-RP"
+                      }
+                    }
+                  }
+                ]
+              },
+              "isMultiValued": false,
+              "columns": null
+            },
+            {
+              "id": "platform_type",
+              "label": "Platform type",
+              "description": "Type of the platform for this host, which is Virtual.",
+              "dataType": {
+                "type": "primitive",
+                "typeId": "STRING"
+              },
+              "displayAdvice": null,
+              "orderIndex": null,
+              "permissibleValues": null,
+              "state": {
+                "dependencies": [],
+                "facets": [
+                  {
+                    "type": "derivedValue",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "string",
+                        "value": "virtual"
+                      }
+                    }
+                  }
+                ]
+              },
+              "isMultiValued": false,
+              "columns": null
+            },
+            {
+              "id": "machine_prefix",
+              "label": "Machine prefix",
+              "description": "Machine prefix to use for generating the machine names for machines provisioned using this blueprint.",
+              "dataType": {
+                "type": "ref",
+                "componentTypeId": "com.vmware.csp.iaas.blueprint.service",
+                "componentId": null,
+                "classId": "Infrastructure.Compute.MachinePrefix",
+                "typeFilter": null,
+                "label": null
+              },
+              "displayAdvice": "DROPDOWN",
+              "orderIndex": null,
+              "permissibleValues": {
+                "type": "dynamic",
+                "customAllowed": false,
+                "context": null,
+                "dependencies": []
+              },
+              "state": {
+                "dependencies": [],
+                "facets": [
+                  {
+                    "type": "nullDisplayText",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "string",
+                        "value": "Use group default"
+                      }
+                    }
+                  },
+                  {
+                    "type": "mandatory",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "boolean",
+                        "value": false
+                      }
+                    }
+                  }
+                ]
+              },
+              "isMultiValued": false,
+              "columns": null
+            },
+            {
+              "id": "action",
+              "label": "Action",
+              "description": "Type of clone method to use for cloning the virtual machine.",
+              "dataType": {
+                "type": "primitive",
+                "typeId": "STRING"
+              },
+              "displayAdvice": null,
+              "orderIndex": 2,
+              "permissibleValues": {
+                "type": "static",
+                "customAllowed": false,
+                "values": [
+                  {
+                    "underlyingValue": {
+                      "type": "string",
+                      "value": "Create"
+                    },
+                    "label": "Create"
+                  },
+                  {
+                    "underlyingValue": {
+                      "type": "string",
+                      "value": "FullClone"
+                    },
+                    "label": "Clone"
+                  },
+                  {
+                    "underlyingValue": {
+                      "type": "string",
+                      "value": "LinkedClone"
+                    },
+                    "label": "Linked Clone"
+                  },
+                  {
+                    "underlyingValue": {
+                      "type": "string",
+                      "value": "NetAppFlexClone"
+                    },
+                    "label": "NetApp FlexClone"
+                  }
+                ]
+              },
+              "state": {
+                "dependencies": [],
+                "facets": [
+                  {
+                    "type": "readOnly",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "boolean",
+                        "value": true
+                      }
+                    }
+                  },
+                  {
+                    "type": "mandatory",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "boolean",
+                        "value": true
+                      }
+                    }
+                  },
+                  {
+                    "type": "defaultValue",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "string",
+                        "value": "FullClone"
+                      }
+                    }
+                  },
+                  {
+                    "type": "visible",
+                    "value": {
+                      "type": "constantClause",
+                      "value": {
+                        "type": "boolean",
+                        "value": false
+                      }
+                    }
+                  },
+                  {
+                    "type": "derivedValue",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "string",
+                        "value": "Create"
+                      }
+                    }
+                  }
+                ]
+              },
+              "isMultiValued": false,
+              "columns": null
+            },
+            {
+              "id": "ovfAuthNeeded",
+              "label": "Authentication needed",
+              "description": "This field specifies the boolean value to indicate if username and password should be used for basic authentication to access the OVF / OVA file on the web server.",
+              "dataType": {
+                "type": "primitive",
+                "typeId": "BOOLEAN"
+              },
+              "displayAdvice": "CHECKBOX",
+              "orderIndex": 5,
+              "permissibleValues": null,
+              "state": {
+                "dependencies": [],
+                "facets": [
+                  {
+                    "type": "visible",
+                    "value": {
+                      "type": "constantClause",
+                      "value": {
+                        "type": "boolean",
+                        "value": false
+                      }
+                    }
+                  },
+                  {
+                    "type": "defaultValue",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "boolean",
+                        "value": false
+                      }
+                    }
+                  }
+                ]
+              },
+              "isMultiValued": false,
+              "columns": null
+            },
+            {
+              "id": "source_machine_vmsnapshot",
+              "label": "Clone from snapshot",
+              "description": "A specific snapshot of the specified source virtual machine to clone from. This is used when linked clone is specified. For linked clone when this is not specified a default such as current snapshot is used.",
+              "dataType": {
+                "type": "ref",
+                "componentTypeId": "com.vmware.csp.iaas.blueprint.service",
+                "componentId": null,
+                "classId": "Infrastructure.Compute.Machine.Snapshot",
+                "typeFilter": null,
+                "label": null
+              },
+              "displayAdvice": "DROPDOWN",
+              "orderIndex": null,
+              "permissibleValues": {
+                "type": "dynamic",
+                "customAllowed": false,
+                "context": null,
+                "dependencies": [
+                  "vSphere__vCenter__Machine_1~source_machine"
+                ]
+              },
+              "state": {
+                "dependencies": [],
+                "facets": [
+                  {
+                    "type": "visible",
+                    "value": {
+                      "type": "constantClause",
+                      "value": {
+                        "type": "boolean",
+                        "value": false
+                      }
+                    }
+                  },
+                  {
+                    "type": "mandatory",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "boolean",
+                        "value": false
+                      }
+                    }
+                  }
+                ]
+              },
+              "isMultiValued": false,
+              "columns": null
+            },
+            {
+              "id": "_allocation",
+              "label": "Allocated",
+              "description": "Allocation information for this component.",
+              "dataType": {
+                "type": "complex",
+                "componentTypeId": "com.vmware.csp.iaas.blueprint.service",
+                "componentId": null,
+                "classId": "Infrastructure.Compute.Machine.Allocation",
+                "typeFilter": null,
+                "label": null,
+                "schema": {
+                  "fields": [
+                    {
+                      "id": "machines",
+                      "label": "Allocated machines",
+                      "description": "Allocation information for machine allocated for this components.",
+                      "dataType": {
+                        "type": "complex",
+                        "componentTypeId": "com.vmware.csp.iaas.blueprint.service",
+                        "componentId": null,
+                        "classId": "Infrastructure.Compute.Machine.Allocation.Machine",
+                        "typeFilter": null,
+                        "label": null,
+                        "schema": {
+                          "fields": [
+                            {
+                              "id": "nics",
+                              "label": "Nics",
+                              "description": "The list of network adapter that are part of the Machine",
+                              "dataType": {
+                                "type": "complex",
+                                "componentTypeId": "com.vmware.csp.iaas.blueprint.service",
+                                "componentId": null,
+                                "classId": "Infrastructure.Compute.Machine.Nic",
+                                "typeFilter": null,
+                                "label": null,
+                                "schema": {
+                                  "fields": [
+                                    {
+                                      "id": "external_address",
+                                      "label": "External Address",
+                                      "description": "The static IP Address from the IP range in the Network profile",
+                                      "dataType": {
+                                        "type": "primitive",
+                                        "typeId": "STRING"
+                                      },
+                                      "displayAdvice": null,
+                                      "orderIndex": null,
+                                      "permissibleValues": null,
+                                      "state": {
+                                        "dependencies": [],
+                                        "facets": [
+                                          {
+                                            "type": "editable",
+                                            "value": {
+                                              "type": "constant",
+                                              "value": {
+                                                "type": "boolean",
+                                                "value": false
+                                              }
+                                            }
+                                          },
+                                          {
+                                            "type": "defaultValue",
+                                            "value": {
+                                              "type": "constant",
+                                              "value": {
+                                                "type": "string",
+                                                "value": ""
+                                              }
+                                            }
+                                          }
+                                        ]
+                                      },
+                                      "isMultiValued": false,
+                                      "columns": null
+                                    },
+                                    {
+                                      "id": "address",
+                                      "label": "Address",
+                                      "description": "The static IP Address from the IP range in the Network profile",
+                                      "dataType": {
+                                        "type": "primitive",
+                                        "typeId": "STRING"
+                                      },
+                                      "displayAdvice": null,
+                                      "orderIndex": null,
+                                      "permissibleValues": null,
+                                      "state": {
+                                        "dependencies": [],
+                                        "facets": [
+                                          {
+                                            "type": "defaultValue",
+                                            "value": {
+                                              "type": "constant",
+                                              "value": {
+                                                "type": "string",
+                                                "value": ""
+                                              }
+                                            }
+                                          },
+                                          {
+                                            "type": "mandatory",
+                                            "value": {
+                                              "type": "expression",
+                                              "operator": {
+                                                "type": "equals"
+                                              },
+                                              "leftOperand": {
+                                                "type": "path",
+                                                "path": "vSphere__vCenter__Machine_1~assignment_type"
+                                              },
+                                              "rightOperand": {
+                                                "type": "constant",
+                                                "value": {
+                                                  "type": "string",
+                                                  "value": "Static"
+                                                }
+                                              }
+                                            }
+                                          }
+                                        ]
+                                      },
+                                      "isMultiValued": false,
+                                      "columns": null
+                                    },
+                                    {
+                                      "id": "assignment_type",
+                                      "label": "Assignment Type",
+                                      "description": "The assignment of the network profile with the IP range. Examples of valid values include",
+                                      "dataType": {
+                                        "type": "primitive",
+                                        "typeId": "STRING"
+                                      },
+                                      "displayAdvice": "DROPDOWN",
+                                      "orderIndex": null,
+                                      "permissibleValues": {
+                                        "type": "static",
+                                        "customAllowed": false,
+                                        "values": [
+                                          {
+                                            "underlyingValue": {
+                                              "type": "string",
+                                              "value": "Static"
+                                            },
+                                            "label": "Static IP"
+                                          },
+                                          {
+                                            "underlyingValue": {
+                                              "type": "string",
+                                              "value": "DHCP"
+                                            },
+                                            "label": "DHCP"
+                                          }
+                                        ]
+                                      },
+                                      "state": {
+                                        "dependencies": [],
+                                        "facets": [
+                                          {
+                                            "type": "defaultValue",
+                                            "value": {
+                                              "type": "constant",
+                                              "value": {
+                                                "type": "string",
+                                                "value": "Static"
+                                              }
+                                            }
+                                          }
+                                        ]
+                                      },
+                                      "isMultiValued": false,
+                                      "columns": null
+                                    },
+                                    {
+                                      "id": "network_profile",
+                                      "label": "Network Profile",
+                                      "description": "The network profile information identifies the network profile and specifies settings for an existing network.",
+                                      "dataType": {
+                                        "type": "primitive",
+                                        "typeId": "STRING"
+                                      },
+                                      "displayAdvice": "DROPDOWN",
+                                      "orderIndex": null,
+                                      "permissibleValues": {
+                                        "type": "dynamic",
+                                        "customAllowed": false,
+                                        "context": null,
+                                        "dependencies": []
+                                      },
+                                      "state": {
+                                        "dependencies": [],
+                                        "facets": []
+                                      },
+                                      "isMultiValued": false,
+                                      "columns": null
+                                    },
+                                    {
+                                      "id": "id",
+                                      "label": "Index",
+                                      "description": "Index of the NIC.",
+                                      "dataType": {
+                                        "type": "primitive",
+                                        "typeId": "INTEGER"
+                                      },
+                                      "displayAdvice": null,
+                                      "orderIndex": null,
+                                      "permissibleValues": null,
+                                      "state": {
+                                        "dependencies": [],
+                                        "facets": []
+                                      },
+                                      "isMultiValued": false,
+                                      "columns": null
+                                    },
+                                    {
+                                      "id": "network",
+                                      "label": "Network",
+                                      "description": "Network selected from networks available in the blueprint.",
+                                      "dataType": {
+                                        "type": "ref",
+                                        "componentTypeId": "com.vmware.csp.component.network.service",
+                                        "componentId": null,
+                                        "classId": "Infrastructure.Network.Network",
+                                        "typeFilter": null,
+                                        "label": "{com.vmware.csp.component.iaas.proxy.provider@Infrastructure.Compute.Machine.Nic.label.network}"
+                                      },
+                                      "displayAdvice": null,
+                                      "orderIndex": null,
+                                      "permissibleValues": {
+                                        "type": "dynamic",
+                                        "customAllowed": false,
+                                        "context": null,
+                                        "dependencies": []
+                                      },
+                                      "state": {
+                                        "dependencies": [],
+                                        "facets": [
+                                          {
+                                            "type": "visible",
+                                            "value": {
+                                              "type": "constant",
+                                              "value": {
+                                                "type": "boolean",
+                                                "value": false
+                                              }
+                                            }
+                                          },
+                                          {
+                                            "type": "mandatory",
+                                            "value": {
+                                              "type": "constant",
+                                              "value": {
+                                                "type": "boolean",
+                                                "value": false
+                                              }
+                                            }
+                                          }
+                                        ]
+                                      },
+                                      "isMultiValued": false,
+                                      "columns": null
+                                    },
+                                    {
+                                      "id": "load_balancing",
+                                      "label": "Load Balancing",
+                                      "description": "The Load Balancer to distribute traffic among multiple instances of the vRA",
+                                      "dataType": {
+                                        "type": "primitive",
+                                        "typeId": "STRING"
+                                      },
+                                      "displayAdvice": null,
+                                      "orderIndex": null,
+                                      "permissibleValues": null,
+                                      "state": {
+                                        "dependencies": [],
+                                        "facets": []
+                                      },
+                                      "isMultiValued": false,
+                                      "columns": null
+                                    }
+                                  ]
+                                }
+                              },
+                              "displayAdvice": null,
+                              "orderIndex": null,
+                              "permissibleValues": null,
+                              "state": {
+                                "dependencies": [],
+                                "facets": []
+                              },
+                              "isMultiValued": true,
+                              "columns": null
+                            },
+                            {
+                              "id": "machine_id",
+                              "label": "Allocated machine id",
+                              "description": "Machine unique id",
+                              "dataType": {
+                                "type": "primitive",
+                                "typeId": "STRING"
+                              },
+                              "displayAdvice": null,
+                              "orderIndex": null,
+                              "permissibleValues": null,
+                              "state": {
+                                "dependencies": [],
+                                "facets": [
+                                  {
+                                    "type": "defaultValue",
+                                    "value": {
+                                      "type": "constant",
+                                      "value": {
+                                        "type": "string",
+                                        "value": ""
+                                      }
+                                    }
+                                  }
+                                ]
+                              },
+                              "isMultiValued": false,
+                              "columns": null
+                            }
+                          ]
+                        }
+                      },
+                      "displayAdvice": null,
+                      "orderIndex": null,
+                      "permissibleValues": null,
+                      "state": {
+                        "dependencies": [],
+                        "facets": []
+                      },
+                      "isMultiValued": true,
+                      "columns": null
+                    }
+                  ]
+                }
+              },
+              "displayAdvice": null,
+              "orderIndex": null,
+              "permissibleValues": null,
+              "state": {
+                "dependencies": [],
+                "facets": [
+                  {
+                    "type": "editable",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "boolean",
+                        "value": false
+                      }
+                    }
+                  }
+                ]
+              },
+              "isMultiValued": false,
+              "columns": null
+            },
+            {
+              "id": "ext.policy.activedirectory.id",
+              "label": null,
+              "description": null,
+              "dataType": {
+                "type": "primitive",
+                "typeId": "STRING"
+              },
+              "displayAdvice": null,
+              "orderIndex": null,
+              "permissibleValues": null,
+              "state": {
+                "dependencies": [],
+                "facets": [
+                  {
+                    "type": "mandatory",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "boolean",
+                        "value": false
+                      }
+                    }
+                  },
+                  {
+                    "type": "defaultValue",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "string",
+                        "value": "WindowsOU"
+                      }
+                    }
+                  },
+                  {
+                    "type": "visible",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "boolean",
+                        "value": false
+                      }
+                    }
+                  },
+                  {
+                    "type": "encrypted",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "boolean",
+                        "value": false
+                      }
+                    }
+                  }
+                ]
+              },
+              "isMultiValued": false,
+              "columns": null
+            },
+            {
+              "id": "image",
+              "label": "Image",
+              "description": "Configure build information for vSphere machine components in the blueprint.",
+              "dataType": {
+                "type": "primitive",
+                "typeId": "STRING"
+              },
+              "displayAdvice": "DROPDOWN",
+              "orderIndex": null,
+              "permissibleValues": {
+                "type": "static",
+                "customAllowed": false,
+                "values": [
+                  {
+                    "underlyingValue": {
+                      "type": "string",
+                      "value": "ValueSet.Windows10"
+                    },
+                    "label": "Windows 10"
+                  },
+                  {
+                    "underlyingValue": {
+                      "type": "string",
+                      "value": "ValueSet.Windows7"
+                    },
+                    "label": "Windows 7"
+                  }
+                ]
+              },
+              "state": {
+                "dependencies": [],
+                "facets": [
+                  {
+                    "type": "defaultValue",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "string",
+                        "value": "ValueSet.Windows10"
+                      }
+                    }
+                  },
+                  {
+                    "type": "mandatory",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "boolean",
+                        "value": true
+                      }
+                    }
+                  }
+                ]
+              },
+              "isMultiValued": false,
+              "columns": [
+                {
+                  "id": "source_machine",
+                  "label": "Clone from",
+                  "description": "The source virtual machine to clone from. This has to be virtual machine template if snapshot is not specified else it has to be a virtual machine.",
+                  "dataType": {
+                    "type": "ref",
+                    "componentTypeId": "com.vmware.csp.iaas.blueprint.service",
+                    "componentId": null,
+                    "classId": "Infrastructure.Virtual.Schema",
+                    "typeFilter": null,
+                    "label": null
+                  },
+                  "displayAdvice": "SEARCHER",
+                  "orderIndex": null,
+                  "permissibleValues": {
+                    "type": "static",
+                    "customAllowed": false,
+                    "values": [
+                      {
+                        "underlyingValue": {
+                          "type": "entityRef",
+                          "classId": "Infrastructure.Virtual.Schema",
+                          "id": "4dbbc985-cc3f-4cb4-bb66-0316490d23e3",
+                          "componentId": null,
+                          "label": "WIN10-WKS-TPL"
+                        },
+                        "label": "ValueSet.Windows10"
+                      },
+                      {
+                        "underlyingValue": {
+                          "type": "entityRef",
+                          "classId": "Infrastructure.Virtual.Schema",
+                          "id": "f5c463d2-ac02-49cb-a6ed-ec598092a568",
+                          "componentId": null,
+                          "label": "WIN7-WKS-TPL"
+                        },
+                        "label": "ValueSet.Windows7"
+                      }
+                    ]
+                  },
+                  "state": {
+                    "dependencies": [],
+                    "facets": [
+                      {
+                        "type": "visible",
+                        "value": {
+                          "type": "expression",
+                          "operator": {
+                            "type": "contains"
+                          },
+                          "leftOperand": {
+                            "type": "path",
+                            "path": "vSphere__vCenter__Machine_1~action"
+                          },
+                          "rightOperand": {
+                            "type": "constant",
+                            "value": {
+                              "type": "string",
+                              "value": "Clone"
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "isMultiValued": false,
+                  "columns": null
+                },
+                {
+                  "id": "blueprint_type",
+                  "label": "Blueprint type",
+                  "description": "Specifies whether machines provisioned from this blueprint are classified as Desktop or Server",
+                  "dataType": {
+                    "type": "primitive",
+                    "typeId": "STRING"
+                  },
+                  "displayAdvice": null,
+                  "orderIndex": 1,
+                  "permissibleValues": {
+                    "type": "static",
+                    "customAllowed": false,
+                    "values": [
+                      {
+                        "underlyingValue": {
+                          "type": "string",
+                          "value": "0"
+                        },
+                        "label": "ValueSet.Windows10"
+                      },
+                      {
+                        "underlyingValue": {
+                          "type": "string",
+                          "value": "0"
+                        },
+                        "label": "ValueSet.Windows7"
+                      }
+                    ]
+                  },
+                  "state": {
+                    "dependencies": [],
+                    "facets": [
+                      {
+                        "type": "readOnly",
+                        "value": {
+                          "type": "constant",
+                          "value": {
+                            "type": "boolean",
+                            "value": true
+                          }
+                        }
+                      },
+                      {
+                        "type": "mandatory",
+                        "value": {
+                          "type": "constant",
+                          "value": {
+                            "type": "boolean",
+                            "value": true
+                          }
+                        }
+                      },
+                      {
+                        "type": "defaultValue",
+                        "value": {
+                          "type": "constant",
+                          "value": {
+                            "type": "string",
+                            "value": "1"
+                          }
+                        }
+                      },
+                      {
+                        "type": "derivedValue",
+                        "value": {
+                          "type": "constant",
+                          "value": {
+                            "type": "string",
+                            "value": "0"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "isMultiValued": false,
+                  "columns": null
+                },
+                {
+                  "id": "ovf_use_proxy",
+                  "label": "Use proxy",
+                  "description": null,
+                  "dataType": {
+                    "type": "primitive",
+                    "typeId": "BOOLEAN"
+                  },
+                  "displayAdvice": "CHECKBOX",
+                  "orderIndex": 8,
+                  "permissibleValues": {
+                    "type": "static",
+                    "customAllowed": false,
+                    "values": []
+                  },
+                  "state": {
+                    "dependencies": [],
+                    "facets": [
+                      {
+                        "type": "visible",
+                        "value": {
+                          "type": "expression",
+                          "operator": {
+                            "type": "equals"
+                          },
+                          "leftOperand": {
+                            "type": "path",
+                            "path": "vSphere__vCenter__Machine_1~provisioning_workflow"
+                          },
+                          "rightOperand": {
+                            "type": "constant",
+                            "value": {
+                              "type": "string",
+                              "value": "ImportOvfWorkflow"
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "type": "defaultValue",
+                        "value": {
+                          "type": "constant",
+                          "value": {
+                            "type": "boolean",
+                            "value": false
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "isMultiValued": false,
+                  "columns": null
+                },
+                {
+                  "id": "action",
+                  "label": "Action",
+                  "description": "Type of clone method to use for cloning the virtual machine.",
+                  "dataType": {
+                    "type": "primitive",
+                    "typeId": "STRING"
+                  },
+                  "displayAdvice": null,
+                  "orderIndex": 2,
+                  "permissibleValues": {
+                    "type": "static",
+                    "customAllowed": false,
+                    "values": [
+                      {
+                        "underlyingValue": {
+                          "type": "string",
+                          "value": "FullClone"
+                        },
+                        "label": "ValueSet.Windows10"
+                      },
+                      {
+                        "underlyingValue": {
+                          "type": "string",
+                          "value": "FullClone"
+                        },
+                        "label": "ValueSet.Windows7"
+                      }
+                    ]
+                  },
+                  "state": {
+                    "dependencies": [],
+                    "facets": [
+                      {
+                        "type": "readOnly",
+                        "value": {
+                          "type": "constant",
+                          "value": {
+                            "type": "boolean",
+                            "value": true
+                          }
+                        }
+                      },
+                      {
+                        "type": "mandatory",
+                        "value": {
+                          "type": "constant",
+                          "value": {
+                            "type": "boolean",
+                            "value": true
+                          }
+                        }
+                      },
+                      {
+                        "type": "defaultValue",
+                        "value": {
+                          "type": "constant",
+                          "value": {
+                            "type": "string",
+                            "value": "Create"
+                          }
+                        }
+                      },
+                      {
+                        "type": "derivedValue",
+                        "value": {
+                          "type": "constant",
+                          "value": {
+                            "type": "string",
+                            "value": "Create"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "isMultiValued": false,
+                  "columns": null
+                },
+                {
+                  "id": "ovfAuthNeeded",
+                  "label": "Authentication needed",
+                  "description": "This field specifies the boolean value to indicate if username and password should be used for basic authentication to access the OVF / OVA file on the web server.",
+                  "dataType": {
+                    "type": "primitive",
+                    "typeId": "BOOLEAN"
+                  },
+                  "displayAdvice": "CHECKBOX",
+                  "orderIndex": 5,
+                  "permissibleValues": {
+                    "type": "static",
+                    "customAllowed": false,
+                    "values": []
+                  },
+                  "state": {
+                    "dependencies": [],
+                    "facets": [
+                      {
+                        "type": "visible",
+                        "value": {
+                          "type": "expression",
+                          "operator": {
+                            "type": "contains"
+                          },
+                          "leftOperand": {
+                            "type": "path",
+                            "path": "vSphere__vCenter__Machine_1~provisioning_workflow"
+                          },
+                          "rightOperand": {
+                            "type": "constant",
+                            "value": {
+                              "type": "string",
+                              "value": "Ovf"
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "type": "defaultValue",
+                        "value": {
+                          "type": "constant",
+                          "value": {
+                            "type": "boolean",
+                            "value": false
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "isMultiValued": false,
+                  "columns": null
+                },
+                {
+                  "id": "source_machine_vmsnapshot",
+                  "label": "Clone from snapshot",
+                  "description": "A specific snapshot of the specified source virtual machine to clone from. This is used when linked clone is specified. For linked clone when this is not specified a default such as current snapshot is used.",
+                  "dataType": {
+                    "type": "ref",
+                    "componentTypeId": "com.vmware.csp.iaas.blueprint.service",
+                    "componentId": null,
+                    "classId": "Infrastructure.Compute.Machine.Snapshot",
+                    "typeFilter": null,
+                    "label": null
+                  },
+                  "displayAdvice": "DROPDOWN",
+                  "orderIndex": null,
+                  "permissibleValues": {
+                    "type": "static",
+                    "customAllowed": false,
+                    "values": []
+                  },
+                  "state": {
+                    "dependencies": [],
+                    "facets": [
+                      {
+                        "type": "visible",
+                        "value": {
+                          "type": "expression",
+                          "operator": {
+                            "type": "contains"
+                          },
+                          "leftOperand": {
+                            "type": "path",
+                            "path": "vSphere__vCenter__Machine_1~action"
+                          },
+                          "rightOperand": {
+                            "type": "constant",
+                            "value": {
+                              "type": "string",
+                              "value": "Linked"
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "type": "mandatory",
+                        "value": {
+                          "type": "constant",
+                          "value": {
+                            "type": "boolean",
+                            "value": false
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "isMultiValued": false,
+                  "columns": null
+                },
+                {
+                  "id": "provisioning_workflow",
+                  "label": "Provisioning workflow",
+                  "description": "Type of provisioning method to use for provisioning.",
+                  "dataType": {
+                    "type": "ref",
+                    "componentTypeId": "com.vmware.csp.iaas.blueprint.service",
+                    "componentId": null,
+                    "classId": "Infrastructure.Compute.ProvisioningWorkflow",
+                    "typeFilter": null,
+                    "label": null
+                  },
+                  "displayAdvice": "DROPDOWN",
+                  "orderIndex": 3,
+                  "permissibleValues": {
+                    "type": "static",
+                    "customAllowed": false,
+                    "values": [
+                      {
+                        "underlyingValue": {
+                          "type": "entityRef",
+                          "classId": "Infrastructure.Compute.ProvisioningWorkflow",
+                          "id": "CloneWorkflow",
+                          "componentId": null,
+                          "label": "CloneWorkflow"
+                        },
+                        "label": "ValueSet.Windows10"
+                      },
+                      {
+                        "underlyingValue": {
+                          "type": "entityRef",
+                          "classId": "Infrastructure.Compute.ProvisioningWorkflow",
+                          "id": "CloneWorkflow",
+                          "componentId": null,
+                          "label": "CloneWorkflow"
+                        },
+                        "label": "ValueSet.Windows7"
+                      }
+                    ]
+                  },
+                  "state": {
+                    "dependencies": [],
+                    "facets": [
+                      {
+                        "type": "derivedValue",
+                        "value": {
+                          "type": "constant",
+                          "value": {
+                            "type": "entityRef",
+                            "classId": "Infrastructure.Compute.ProvisioningWorkflow",
+                            "id": "BasicVmWorkflow",
+                            "componentId": null,
+                            "label": "BasicVmWorkflow"
+                          }
+                        }
+                      },
+                      {
+                        "type": "readOnly",
+                        "value": {
+                          "type": "constant",
+                          "value": {
+                            "type": "boolean",
+                            "value": true
+                          }
+                        }
+                      },
+                      {
+                        "type": "mandatory",
+                        "value": {
+                          "type": "constant",
+                          "value": {
+                            "type": "boolean",
+                            "value": true
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "isMultiValued": false,
+                  "columns": null
+                },
+                {
+                  "id": "ovf_proxy_endpoint",
+                  "label": "Proxy endpoint",
+                  "description": null,
+                  "dataType": {
+                    "type": "ref",
+                    "componentTypeId": "com.vmware.csp.iaas.blueprint.service",
+                    "componentId": null,
+                    "classId": "Infrastructure.EndpointConfiguration.Network.Proxy",
+                    "typeFilter": null,
+                    "label": null
+                  },
+                  "displayAdvice": "DROPDOWN",
+                  "orderIndex": 9,
+                  "permissibleValues": {
+                    "type": "static",
+                    "customAllowed": false,
+                    "values": []
+                  },
+                  "state": {
+                    "dependencies": [],
+                    "facets": [
+                      {
+                        "type": "visible",
+                        "value": {
+                          "type": "expression",
+                          "operator": {
+                            "type": "equals"
+                          },
+                          "leftOperand": {
+                            "type": "path",
+                            "path": "vSphere__vCenter__Machine_1~ovf_use_proxy"
+                          },
+                          "rightOperand": {
+                            "type": "constant",
+                            "value": {
+                              "type": "string",
+                              "value": "true"
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "isMultiValued": false,
+                  "columns": null
+                },
+                {
+                  "id": "ovf_url_pwd",
+                  "label": "Password",
+                  "description": null,
+                  "dataType": {
+                    "type": "primitive",
+                    "typeId": "SECURE_STRING"
+                  },
+                  "displayAdvice": "CONFIRM_PASSWORD",
+                  "orderIndex": 7,
+                  "permissibleValues": {
+                    "type": "static",
+                    "customAllowed": false,
+                    "values": []
+                  },
+                  "state": {
+                    "dependencies": [],
+                    "facets": [
+                      {
+                        "type": "visible",
+                        "value": {
+                          "type": "expression",
+                          "operator": {
+                            "type": "contains"
+                          },
+                          "leftOperand": {
+                            "type": "path",
+                            "path": "vSphere__vCenter__Machine_1~ovfAuthNeeded"
+                          },
+                          "rightOperand": {
+                            "type": "constant",
+                            "value": {
+                              "type": "string",
+                              "value": "true"
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "type": "encrypted",
+                        "value": {
+                          "type": "constant",
+                          "value": {
+                            "type": "boolean",
+                            "value": true
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "isMultiValued": false,
+                  "columns": null
+                },
+                {
+                  "id": "source_machine_name",
+                  "label": "Clone from name",
+                  "description": "The source virtual machine name to clone from. source_machine is an entityref where we specify the id of the machine we are cloning from. source_machine will take higher priority and will overwrite the value specified by source_machine_name. Empty Guid will throw an exception and will not result in another query based on name. Only when __clonefromId is not specified we will query by __clonefrom",
+                  "dataType": {
+                    "type": "primitive",
+                    "typeId": "STRING"
+                  },
+                  "displayAdvice": null,
+                  "orderIndex": null,
+                  "permissibleValues": {
+                    "type": "static",
+                    "customAllowed": false,
+                    "values": []
+                  },
+                  "state": {
+                    "dependencies": [],
+                    "facets": [
+                      {
+                        "type": "visible",
+                        "value": {
+                          "type": "constant",
+                          "value": {
+                            "type": "boolean",
+                            "value": false
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "isMultiValued": false,
+                  "columns": null
+                },
+                {
+                  "id": "guest_customization_specification",
+                  "label": "Customization spec",
+                  "description": "Name of the guest customization spec to use to customize the vm post initial clone. Network (IP) related info is super-imposed on top of spec retrieved by this name.",
+                  "dataType": {
+                    "type": "primitive",
+                    "typeId": "STRING"
+                  },
+                  "displayAdvice": null,
+                  "orderIndex": null,
+                  "permissibleValues": {
+                    "type": "static",
+                    "customAllowed": false,
+                    "values": [
+                      {
+                        "underlyingValue": {
+                          "type": "string",
+                          "value": "Windows DHCP"
+                        },
+                        "label": "ValueSet.Windows10"
+                      },
+                      {
+                        "underlyingValue": {
+                          "type": "string",
+                          "value": "Windows DHCP"
+                        },
+                        "label": "ValueSet.Windows7"
+                      }
+                    ]
+                  },
+                  "state": {
+                    "dependencies": [],
+                    "facets": [
+                      {
+                        "type": "visible",
+                        "value": {
+                          "type": "expression",
+                          "operator": {
+                            "type": "contains"
+                          },
+                          "leftOperand": {
+                            "type": "path",
+                            "path": "vSphere__vCenter__Machine_1~action"
+                          },
+                          "rightOperand": {
+                            "type": "constant",
+                            "value": {
+                              "type": "string",
+                              "value": "Clone"
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "type": "readOnly",
+                        "value": {
+                          "type": "constant",
+                          "value": {
+                            "type": "boolean",
+                            "value": true
+                          }
+                        }
+                      },
+                      {
+                        "type": "defaultValue",
+                        "value": {
+                          "type": "constant",
+                          "value": {
+                            "type": "string",
+                            "value": "Windows DHCP"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "isMultiValued": false,
+                  "columns": null
+                },
+                {
+                  "id": "ovf_url_username",
+                  "label": "Username",
+                  "description": null,
+                  "dataType": {
+                    "type": "primitive",
+                    "typeId": "STRING"
+                  },
+                  "displayAdvice": "TEXTBOX",
+                  "orderIndex": 6,
+                  "permissibleValues": {
+                    "type": "static",
+                    "customAllowed": false,
+                    "values": []
+                  },
+                  "state": {
+                    "dependencies": [],
+                    "facets": [
+                      {
+                        "type": "visible",
+                        "value": {
+                          "type": "expression",
+                          "operator": {
+                            "type": "contains"
+                          },
+                          "leftOperand": {
+                            "type": "path",
+                            "path": "vSphere__vCenter__Machine_1~ovfAuthNeeded"
+                          },
+                          "rightOperand": {
+                            "type": "constant",
+                            "value": {
+                              "type": "string",
+                              "value": "true"
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "isMultiValued": false,
+                  "columns": null
+                },
+                {
+                  "id": "ovf_url",
+                  "label": "URL",
+                  "description": "This is the location at which the OVF / OVA file is present. The URL should be specified in the form http(s)://url-location/file.(ovf/ova)",
+                  "dataType": {
+                    "type": "primitive",
+                    "typeId": "STRING"
+                  },
+                  "displayAdvice": null,
+                  "orderIndex": 4,
+                  "permissibleValues": {
+                    "type": "static",
+                    "customAllowed": false,
+                    "values": []
+                  },
+                  "state": {
+                    "dependencies": [],
+                    "facets": [
+                      {
+                        "type": "visible",
+                        "value": {
+                          "type": "expression",
+                          "operator": {
+                            "type": "contains"
+                          },
+                          "leftOperand": {
+                            "type": "path",
+                            "path": "vSphere__vCenter__Machine_1~provisioning_workflow"
+                          },
+                          "rightOperand": {
+                            "type": "constant",
+                            "value": {
+                              "type": "string",
+                              "value": "Ovf"
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "isMultiValued": false,
+                  "columns": null
+                }
+              ]
+            },
+            {
+              "id": "provisioning_workflow",
+              "label": "Provisioning workflow",
+              "description": "Type of provisioning method to use for provisioning.",
+              "dataType": {
+                "type": "ref",
+                "componentTypeId": "com.vmware.csp.iaas.blueprint.service",
+                "componentId": null,
+                "classId": "Infrastructure.Compute.ProvisioningWorkflow",
+                "typeFilter": null,
+                "label": null
+              },
+              "displayAdvice": "DROPDOWN",
+              "orderIndex": 3,
+              "permissibleValues": {
+                "type": "dynamic",
+                "customAllowed": false,
+                "context": null,
+                "dependencies": [
+                  "vSphere__vCenter__Machine_1~platform_name",
+                  "vSphere__vCenter__Machine_1~action"
+                ]
+              },
+              "state": {
+                "dependencies": [],
+                "facets": [
+                  {
+                    "type": "readOnly",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "boolean",
+                        "value": true
+                      }
+                    }
+                  },
+                  {
+                    "type": "mandatory",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "boolean",
+                        "value": true
+                      }
+                    }
+                  },
+                  {
+                    "type": "defaultValue",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "entityRef",
+                        "classId": "Infrastructure.Compute.ProvisioningWorkflow",
+                        "id": "CloneWorkflow",
+                        "componentId": null,
+                        "label": "CloneWorkflow"
+                      }
+                    }
+                  },
+                  {
+                    "type": "visible",
+                    "value": {
+                      "type": "constantClause",
+                      "value": {
+                        "type": "boolean",
+                        "value": false
+                      }
+                    }
+                  },
+                  {
+                    "type": "derivedValue",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "entityRef",
+                        "classId": "Infrastructure.Compute.ProvisioningWorkflow",
+                        "id": "BasicVmWorkflow",
+                        "componentId": null,
+                        "label": "BasicVmWorkflow"
+                      }
+                    }
+                  }
+                ]
+              },
+              "isMultiValued": false,
+              "columns": null
+            },
+            {
+              "id": "Extensibility.Lifecycle.Properties.VMPSMasterWorkflow32.Requested",
+              "label": null,
+              "description": null,
+              "dataType": {
+                "type": "primitive",
+                "typeId": "STRING"
+              },
+              "displayAdvice": null,
+              "orderIndex": null,
+              "permissibleValues": null,
+              "state": {
+                "dependencies": [],
+                "facets": [
+                  {
+                    "type": "mandatory",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "boolean",
+                        "value": false
+                      }
+                    }
+                  },
+                  {
+                    "type": "defaultValue",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "string",
+                        "value": "*"
+                      }
+                    }
+                  },
+                  {
+                    "type": "visible",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "boolean",
+                        "value": false
+                      }
+                    }
+                  },
+                  {
+                    "type": "encrypted",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "boolean",
+                        "value": false
+                      }
+                    }
+                  }
+                ]
+              },
+              "isMultiValued": false,
+              "columns": null
+            },
+            {
+              "id": "Custom.ComponentMachine.HostnameScheme",
+              "label": null,
+              "description": null,
+              "dataType": {
+                "type": "primitive",
+                "typeId": "STRING"
+              },
+              "displayAdvice": null,
+              "orderIndex": null,
+              "permissibleValues": null,
+              "state": {
+                "dependencies": [],
+                "facets": [
+                  {
+                    "type": "mandatory",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "boolean",
+                        "value": false
+                      }
+                    }
+                  },
+                  {
+                    "type": "defaultValue",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "string",
+                        "value": "SLI{LOC}{TEN}{FUNC}{ENV}{#}"
+                      }
+                    }
+                  },
+                  {
+                    "type": "visible",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "boolean",
+                        "value": false
+                      }
+                    }
+                  },
+                  {
+                    "type": "encrypted",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "boolean",
+                        "value": false
+                      }
+                    }
+                  }
+                ]
+              },
+              "isMultiValued": false,
+              "columns": null
+            },
+            {
+              "id": "os_arch",
+              "label": "OS architecture",
+              "description": "The host Operating System (OS) architecture. Examples of valid values include",
+              "dataType": {
+                "type": "primitive",
+                "typeId": "STRING"
+              },
+              "displayAdvice": "DROPDOWN",
+              "orderIndex": null,
+              "permissibleValues": {
+                "type": "static",
+                "customAllowed": false,
+                "values": [
+                  {
+                    "underlyingValue": {
+                      "type": "string",
+                      "value": "x86_32"
+                    },
+                    "label": "32-bit"
+                  },
+                  {
+                    "underlyingValue": {
+                      "type": "string",
+                      "value": "x86_64"
+                    },
+                    "label": "64-bit"
+                  }
+                ]
+              },
+              "state": {
+                "dependencies": [],
+                "facets": [
+                  {
+                    "type": "defaultValue",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "string",
+                        "value": "x86_64"
+                      }
+                    }
+                  }
+                ]
+              },
+              "isMultiValued": false,
+              "columns": null
+            },
+            {
+              "id": "datacenter_location",
+              "label": "Location",
+              "description": "The location of the host that this machine must be provisioned on.",
+              "dataType": {
+                "type": "ref",
+                "componentTypeId": "com.vmware.csp.iaas.blueprint.service",
+                "componentId": null,
+                "classId": "Infrastructure.Compute.DataCenterLocations",
+                "typeFilter": null,
+                "label": null
+              },
+              "displayAdvice": null,
+              "orderIndex": null,
+              "permissibleValues": {
+                "type": "dynamic",
+                "customAllowed": false,
+                "context": null,
+                "dependencies": []
+              },
+              "state": {
+                "dependencies": [],
+                "facets": []
+              },
+              "isMultiValued": false,
+              "columns": null
+            },
+            {
+              "id": "cpu",
+              "label": "CPUs",
+              "description": "Number of virtual CPUs.",
+              "dataType": {
+                "type": "primitive",
+                "typeId": "INTEGER"
+              },
+              "displayAdvice": null,
+              "orderIndex": null,
+              "permissibleValues": null,
+              "state": {
+                "dependencies": [
+                  "vSphere__vCenter__Machine_1~source_machine",
+                  "vSphere__vCenter__Machine_1~action"
+                ],
+                "facets": [
+                  {
+                    "type": "maxValue",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "integer",
+                        "value": 4
+                      }
+                    }
+                  },
+                  {
+                    "type": "minValue",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "integer",
+                        "value": 1
+                      }
+                    }
+                  },
+                  {
+                    "type": "defaultValue",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "integer",
+                        "value": 1
+                      }
+                    }
+                  }
+                ]
+              },
+              "isMultiValued": false,
+              "columns": null
+            },
+            {
+              "id": "property_groups",
+              "label": "Property groups",
+              "description": "A comma separated list of selected property groups.",
+              "dataType": {
+                "type": "primitive",
+                "typeId": "STRING"
+              },
+              "displayAdvice": null,
+              "orderIndex": null,
+              "permissibleValues": null,
+              "state": {
+                "dependencies": [],
+                "facets": []
+              },
+              "isMultiValued": true,
+              "columns": null
+            },
+            {
+              "id": "ovf_proxy_endpoint",
+              "label": "Proxy endpoint",
+              "description": null,
+              "dataType": {
+                "type": "ref",
+                "componentTypeId": "com.vmware.csp.iaas.blueprint.service",
+                "componentId": null,
+                "classId": "Infrastructure.EndpointConfiguration.Network.Proxy",
+                "typeFilter": null,
+                "label": null
+              },
+              "displayAdvice": "DROPDOWN",
+              "orderIndex": 9,
+              "permissibleValues": {
+                "type": "dynamic",
+                "customAllowed": false,
+                "context": null,
+                "dependencies": [
+                  "vSphere__vCenter__Machine_1~ovf_use_proxy"
+                ]
+              },
+              "state": {
+                "dependencies": [],
+                "facets": [
+                  {
+                    "type": "visible",
+                    "value": {
+                      "type": "constantClause",
+                      "value": {
+                        "type": "boolean",
+                        "value": false
+                      }
+                    }
+                  }
+                ]
+              },
+              "isMultiValued": false,
+              "columns": null
+            },
+            {
+              "id": "security_groups",
+              "label": "Security Groups",
+              "description": "Security groups selected from the groups available on the canvas.",
+              "dataType": {
+                "type": "ref",
+                "componentTypeId": "com.vmware.csp.component.network.service",
+                "componentId": null,
+                "classId": "Infrastructure.Network.SecurityGroup.NSX",
+                "typeFilter": null,
+                "label": "{com.vmware.csp.component.iaas.proxy.provider@Infrastructure.CatalogItem.Machine.Virtual.vSphere.label.security.group}"
+              },
+              "displayAdvice": null,
+              "orderIndex": null,
+              "permissibleValues": null,
+              "state": {
+                "dependencies": [],
+                "facets": [
+                  {
+                    "type": "visible",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "boolean",
+                        "value": false
+                      }
+                    }
+                  },
+                  {
+                    "type": "mandatory",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "boolean",
+                        "value": false
+                      }
+                    }
+                  },
+                  {
+                    "type": "defaultValue",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "multiple",
+                        "elementTypeId": "ENTITY_REFERENCE",
+                        "items": []
+                      }
+                    }
+                  }
+                ]
+              },
+              "isMultiValued": true,
+              "columns": null
+            },
+            {
+              "id": "_cluster",
+              "label": "Instances",
+              "description": null,
+              "dataType": {
+                "type": "primitive",
+                "typeId": "INTEGER"
+              },
+              "displayAdvice": null,
+              "orderIndex": null,
+              "permissibleValues": null,
+              "state": {
+                "dependencies": [],
+                "facets": [
+                  {
+                    "type": "maxValue",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "integer",
+                        "value": 1
+                      }
+                    }
+                  },
+                  {
+                    "type": "minValue",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "integer",
+                        "value": 1
+                      }
+                    }
+                  },
+                  {
+                    "type": "defaultValue",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "integer",
+                        "value": 1
+                      }
+                    }
+                  }
+                ]
+              },
+              "isMultiValued": false,
+              "columns": null
+            },
+            {
+              "id": "os_type",
+              "label": "OS family",
+              "description": "The host Operating System (OS) type. Examples of valid values include",
+              "dataType": {
+                "type": "primitive",
+                "typeId": "STRING"
+              },
+              "displayAdvice": "DROPDOWN",
+              "orderIndex": null,
+              "permissibleValues": {
+                "type": "static",
+                "customAllowed": false,
+                "values": [
+                  {
+                    "underlyingValue": {
+                      "type": "string",
+                      "value": "Linux"
+                    },
+                    "label": "Linux"
+                  },
+                  {
+                    "underlyingValue": {
+                      "type": "string",
+                      "value": "Windows"
+                    },
+                    "label": "Windows"
+                  }
+                ]
+              },
+              "state": {
+                "dependencies": [],
+                "facets": [
+                  {
+                    "type": "defaultValue",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "string",
+                        "value": "Linux"
+                      }
+                    }
+                  }
+                ]
+              },
+              "isMultiValued": false,
+              "columns": null
+            },
+            {
+              "id": "max_volumes",
+              "label": "Maximum volumes",
+              "description": "The maximum number of volumes a user can select for provisioned machines.",
+              "dataType": {
+                "type": "primitive",
+                "typeId": "INTEGER"
+              },
+              "displayAdvice": null,
+              "orderIndex": null,
+              "permissibleValues": null,
+              "state": {
+                "dependencies": [],
+                "facets": [
+                  {
+                    "type": "maxValue",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "integer",
+                        "value": 60
+                      }
+                    }
+                  },
+                  {
+                    "type": "minValue",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "integer",
+                        "value": 0
+                      }
+                    }
+                  },
+                  {
+                    "type": "defaultValue",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "integer",
+                        "value": 60
+                      }
+                    }
+                  }
+                ]
+              },
+              "isMultiValued": false,
+              "columns": null
+            },
+            {
+              "id": "VirtualMachine.Admin.UseGuestAgent",
+              "label": null,
+              "description": null,
+              "dataType": {
+                "type": "primitive",
+                "typeId": "STRING"
+              },
+              "displayAdvice": null,
+              "orderIndex": null,
+              "permissibleValues": null,
+              "state": {
+                "dependencies": [],
+                "facets": [
+                  {
+                    "type": "mandatory",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "boolean",
+                        "value": false
+                      }
+                    }
+                  },
+                  {
+                    "type": "defaultValue",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "string",
+                        "value": "True"
+                      }
+                    }
+                  },
+                  {
+                    "type": "visible",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "boolean",
+                        "value": false
+                      }
+                    }
+                  },
+                  {
+                    "type": "encrypted",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "boolean",
+                        "value": false
+                      }
+                    }
+                  }
+                ]
+              },
+              "isMultiValued": false,
+              "columns": null
+            },
+            {
+              "id": "Extensibility.Lifecycle.Properties.VMPSMasterWorkflow32.MachineProvisioned",
+              "label": null,
+              "description": null,
+              "dataType": {
+                "type": "primitive",
+                "typeId": "STRING"
+              },
+              "displayAdvice": null,
+              "orderIndex": null,
+              "permissibleValues": null,
+              "state": {
+                "dependencies": [],
+                "facets": [
+                  {
+                    "type": "mandatory",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "boolean",
+                        "value": false
+                      }
+                    }
+                  },
+                  {
+                    "type": "defaultValue",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "string",
+                        "value": "*"
+                      }
+                    }
+                  },
+                  {
+                    "type": "visible",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "boolean",
+                        "value": false
+                      }
+                    }
+                  },
+                  {
+                    "type": "encrypted",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "boolean",
+                        "value": false
+                      }
+                    }
+                  }
+                ]
+              },
+              "isMultiValued": false,
+              "columns": null
+            },
+            {
+              "id": "ovf_url_pwd",
+              "label": "Password",
+              "description": null,
+              "dataType": {
+                "type": "primitive",
+                "typeId": "SECURE_STRING"
+              },
+              "displayAdvice": "CONFIRM_PASSWORD",
+              "orderIndex": 7,
+              "permissibleValues": null,
+              "state": {
+                "dependencies": [],
+                "facets": [
+                  {
+                    "type": "visible",
+                    "value": {
+                      "type": "constantClause",
+                      "value": {
+                        "type": "boolean",
+                        "value": false
+                      }
+                    }
+                  },
+                  {
+                    "type": "encrypted",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "boolean",
+                        "value": true
+                      }
+                    }
+                  }
+                ]
+              },
+              "isMultiValued": false,
+              "columns": null
+            },
+            {
+              "id": "VirtualMachine.Admin.AddOwnerToAdmins",
+              "label": null,
+              "description": null,
+              "dataType": {
+                "type": "primitive",
+                "typeId": "STRING"
+              },
+              "displayAdvice": null,
+              "orderIndex": null,
+              "permissibleValues": null,
+              "state": {
+                "dependencies": [],
+                "facets": [
+                  {
+                    "type": "mandatory",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "boolean",
+                        "value": false
+                      }
+                    }
+                  },
+                  {
+                    "type": "defaultValue",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "string",
+                        "value": "True"
+                      }
+                    }
+                  },
+                  {
+                    "type": "visible",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "boolean",
+                        "value": false
+                      }
+                    }
+                  },
+                  {
+                    "type": "encrypted",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "boolean",
+                        "value": false
+                      }
+                    }
+                  }
+                ]
+              },
+              "isMultiValued": false,
+              "columns": null
+            },
+            {
+              "id": "security_tags",
+              "label": "Security Tags",
+              "description": "Security tag selected from the tags available on the canvas.",
+              "dataType": {
+                "type": "ref",
+                "componentTypeId": "com.vmware.csp.component.network.service",
+                "componentId": null,
+                "classId": "Infrastructure.Network.SecurityTag.NSX",
+                "typeFilter": null,
+                "label": "{com.vmware.csp.component.iaas.proxy.provider@Infrastructure.CatalogItem.Machine.Virtual.vSphere.label.security.tag}"
+              },
+              "displayAdvice": null,
+              "orderIndex": null,
+              "permissibleValues": null,
+              "state": {
+                "dependencies": [],
+                "facets": [
+                  {
+                    "type": "visible",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "boolean",
+                        "value": false
+                      }
+                    }
+                  },
+                  {
+                    "type": "mandatory",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "boolean",
+                        "value": false
+                      }
+                    }
+                  },
+                  {
+                    "type": "defaultValue",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "multiple",
+                        "elementTypeId": "ENTITY_REFERENCE",
+                        "items": []
+                      }
+                    }
+                  }
+                ]
+              },
+              "isMultiValued": true,
+              "columns": null
+            },
+            {
+              "id": "slx.ad.users.name",
+              "label": "Owner name",
+              "description": "this user will have local administrator right.",
+              "dataType": {
+                "type": "primitive",
+                "typeId": "STRING"
+              },
+              "displayAdvice": "DROPDOWN",
+              "orderIndex": null,
+              "permissibleValues": {
+                "type": "dynamic",
+                "customAllowed": false,
+                "context": {
+                  "providerEntityId": "org.sli.test/getADGroupMembership",
+                  "parameterMappings": {
+                    "params": [
+                      {
+                        "key": "groupOU",
+                        "value": {
+                          "type": "path",
+                          "path": "slx.ad.group.users"
+                        }
+                      },
+                      {
+                        "key": "host",
+                        "value": {
+                          "type": "constant",
+                          "value": {
+                            "type": "string",
+                            "value": null
+                          }
+                        }
+                      },
+                      {
+                        "key": "resultType",
+                        "value": {
+                          "type": "constant",
+                          "value": {
+                            "type": "string",
+                            "value": "name"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                },
+                "dependencies": [
+                  "slx.ad.group.users"
+                ]
+              },
+              "state": {
+                "dependencies": [],
+                "facets": [
+                  {
+                    "type": "mandatory",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "boolean",
+                        "value": false
+                      }
+                    }
+                  },
+                  {
+                    "type": "defaultValue",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "string",
+                        "value": ""
+                      }
+                    }
+                  },
+                  {
+                    "type": "visible",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "boolean",
+                        "value": true
+                      }
+                    }
+                  },
+                  {
+                    "type": "encrypted",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "boolean",
+                        "value": false
+                      }
+                    }
+                  }
+                ]
+              },
+              "isMultiValued": false,
+              "columns": null
+            },
+            {
+              "id": "allow_storage_policies",
+              "label": "Allow user to see and change storage reservation policies",
+              "description": "Should the user be able to see and change the storage reservation policies.",
+              "dataType": {
+                "type": "primitive",
+                "typeId": "BOOLEAN"
+              },
+              "displayAdvice": "CHECKBOX",
+              "orderIndex": null,
+              "permissibleValues": null,
+              "state": {
+                "dependencies": [],
+                "facets": [
+                  {
+                    "type": "derivedValue",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "boolean",
+                        "value": false
+                      }
+                    }
+                  },
+                  {
+                    "type": "defaultValue",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "boolean",
+                        "value": false
+                      }
+                    }
+                  }
+                ]
+              },
+              "isMultiValued": false,
+              "columns": null
+            },
+            {
+              "id": "snapshot_name",
+              "label": "Clone from snapshot External Snapshot Name",
+              "description": "A specific snapshot of the specified source virtual machine to clone from. This is used when linked clone is specified. For linked clone when this is not specified a default such as current snapshot is used.",
+              "dataType": {
+                "type": "primitive",
+                "typeId": "STRING"
+              },
+              "displayAdvice": null,
+              "orderIndex": null,
+              "permissibleValues": null,
+              "state": {
+                "dependencies": [],
+                "facets": [
+                  {
+                    "type": "mandatory",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "boolean",
+                        "value": false
+                      }
+                    }
+                  }
+                ]
+              },
+              "isMultiValued": false,
+              "columns": null
+            },
+            {
+              "id": "memory",
+              "label": "Memory (MB)",
+              "description": "The amount of RAM allocated to the machine in megabytes.",
+              "dataType": {
+                "type": "primitive",
+                "typeId": "INTEGER"
+              },
+              "displayAdvice": null,
+              "orderIndex": null,
+              "permissibleValues": null,
+              "state": {
+                "dependencies": [
+                  "vSphere__vCenter__Machine_1~source_machine",
+                  "vSphere__vCenter__Machine_1~action"
+                ],
+                "facets": [
+                  {
+                    "type": "maxValue",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "integer",
+                        "value": 16384
+                      }
+                    }
+                  },
+                  {
+                    "type": "defaultValue",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "integer",
+                        "value": 2048
+                      }
+                    }
+                  },
+                  {
+                    "type": "visible",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "boolean",
+                        "value": true
+                      }
+                    }
+                  },
+                  {
+                    "type": "minValue",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "integer",
+                        "value": 2048
+                      }
+                    }
+                  }
+                ]
+              },
+              "isMultiValued": false,
+              "columns": null
+            },
+            {
+              "id": "disks",
+              "label": "Disks",
+              "description": "The list of disks local storage that are part of the Machine. Adding an element to this list creates a disk. If action is clone-based this list represents additional disks to be added on top of cloned disks coming from source machine or template.",
+              "dataType": {
+                "type": "complex",
+                "componentTypeId": "com.vmware.csp.iaas.blueprint.service",
+                "componentId": null,
+                "classId": "Infrastructure.Compute.Machine.MachineDisk",
+                "typeFilter": null,
+                "label": null,
+                "schema": {
+                  "fields": [
+                    {
+                      "id": "is_clone",
+                      "label": "Is Clone",
+                      "description": "Is the volume a clone.",
+                      "dataType": {
+                        "type": "primitive",
+                        "typeId": "BOOLEAN"
+                      },
+                      "displayAdvice": null,
+                      "orderIndex": null,
+                      "permissibleValues": null,
+                      "state": {
+                        "dependencies": [],
+                        "facets": []
+                      },
+                      "isMultiValued": false,
+                      "columns": null
+                    },
+                    {
+                      "id": "initial_location",
+                      "label": "Drive letter / Mount path",
+                      "description": "Operating System-specific location (path) in its namespace where this disk first appears",
+                      "dataType": {
+                        "type": "primitive",
+                        "typeId": "STRING"
+                      },
+                      "displayAdvice": null,
+                      "orderIndex": null,
+                      "permissibleValues": null,
+                      "state": {
+                        "dependencies": [],
+                        "facets": []
+                      },
+                      "isMultiValued": false,
+                      "columns": null
+                    },
+                    {
+                      "id": "id",
+                      "label": "Volume ID",
+                      "description": "The volume ID for the disk.",
+                      "dataType": {
+                        "type": "primitive",
+                        "typeId": "INTEGER"
+                      },
+                      "displayAdvice": null,
+                      "orderIndex": null,
+                      "permissibleValues": null,
+                      "state": {
+                        "dependencies": [],
+                        "facets": []
+                      },
+                      "isMultiValued": false,
+                      "columns": null
+                    },
+                    {
+                      "id": "label",
+                      "label": "Label",
+                      "description": "disk label",
+                      "dataType": {
+                        "type": "primitive",
+                        "typeId": "STRING"
+                      },
+                      "displayAdvice": null,
+                      "orderIndex": null,
+                      "permissibleValues": null,
+                      "state": {
+                        "dependencies": [],
+                        "facets": []
+                      },
+                      "isMultiValued": false,
+                      "columns": null
+                    },
+                    {
+                      "id": "userCreated",
+                      "label": "User Created",
+                      "description": "Is the disk created by user.",
+                      "dataType": {
+                        "type": "primitive",
+                        "typeId": "BOOLEAN"
+                      },
+                      "displayAdvice": null,
+                      "orderIndex": null,
+                      "permissibleValues": null,
+                      "state": {
+                        "dependencies": [],
+                        "facets": []
+                      },
+                      "isMultiValued": false,
+                      "columns": null
+                    },
+                    {
+                      "id": "storage_reservation_policy",
+                      "label": "Storage Reservation policy",
+                      "description": "Optional Storage Reservation policy to further constrain the matching reservations for this disk.",
+                      "dataType": {
+                        "type": "primitive",
+                        "typeId": "STRING"
+                      },
+                      "displayAdvice": "DROPDOWN",
+                      "orderIndex": null,
+                      "permissibleValues": {
+                        "type": "dynamic",
+                        "customAllowed": false,
+                        "context": null,
+                        "dependencies": []
+                      },
+                      "state": {
+                        "dependencies": [],
+                        "facets": []
+                      },
+                      "isMultiValued": false,
+                      "columns": null
+                    },
+                    {
+                      "id": "capacity",
+                      "label": "Capacity",
+                      "description": "The capacity of this disk in gigabytes.",
+                      "dataType": {
+                        "type": "primitive",
+                        "typeId": "INTEGER"
+                      },
+                      "displayAdvice": null,
+                      "orderIndex": null,
+                      "permissibleValues": null,
+                      "state": {
+                        "dependencies": [],
+                        "facets": []
+                      },
+                      "isMultiValued": false,
+                      "columns": null
+                    }
+                  ]
+                }
+              },
+              "displayAdvice": "DATA_TABLE",
+              "orderIndex": null,
+              "permissibleValues": null,
+              "state": {
+                "dependencies": [],
+                "facets": [
+                  {
+                    "type": "defaultValue",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "multiple",
+                        "elementTypeId": "COMPLEX",
+                        "items": []
+                      }
+                    }
+                  }
+                ]
+              },
+              "isMultiValued": true,
+              "columns": null
+            },
+            {
+              "id": "HardDriveSize",
+              "label": "HardDriveSize",
+              "description": "size requested for disk C:\nXSmall = 60 Go\nSmall = 120 Go\nMedium = 250 Go\nLarge = 512 Go\nXLarge = 1024 Go",
+              "dataType": {
+                "type": "primitive",
+                "typeId": "STRING"
+              },
+              "displayAdvice": "DROPDOWN",
+              "orderIndex": null,
+              "permissibleValues": {
+                "type": "static",
+                "customAllowed": false,
+                "values": [
+                  {
+                    "underlyingValue": {
+                      "type": "string",
+                      "value": "60"
+                    },
+                    "label": "XSmall"
+                  },
+                  {
+                    "underlyingValue": {
+                      "type": "string",
+                      "value": "120"
+                    },
+                    "label": "Small"
+                  },
+                  {
+                    "underlyingValue": {
+                      "type": "string",
+                      "value": "250"
+                    },
+                    "label": "Medium"
+                  },
+                  {
+                    "underlyingValue": {
+                      "type": "string",
+                      "value": "512"
+                    },
+                    "label": "Large"
+                  },
+                  {
+                    "underlyingValue": {
+                      "type": "string",
+                      "value": "1024"
+                    },
+                    "label": "XLarge"
+                  }
+                ]
+              },
+              "state": {
+                "dependencies": [],
+                "facets": [
+                  {
+                    "type": "mandatory",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "boolean",
+                        "value": false
+                      }
+                    }
+                  },
+                  {
+                    "type": "defaultValue",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "string",
+                        "value": "250"
+                      }
+                    }
+                  },
+                  {
+                    "type": "visible",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "boolean",
+                        "value": true
+                      }
+                    }
+                  },
+                  {
+                    "type": "encrypted",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "boolean",
+                        "value": false
+                      }
+                    }
+                  }
+                ]
+              },
+              "isMultiValued": false,
+              "columns": null
+            },
+            {
+              "id": "description",
+              "label": "Description",
+              "description": "Description",
+              "dataType": {
+                "type": "primitive",
+                "typeId": "STRING"
+              },
+              "displayAdvice": null,
+              "orderIndex": null,
+              "permissibleValues": null,
+              "state": {
+                "dependencies": [],
+                "facets": []
+              },
+              "isMultiValued": false,
+              "columns": null
+            },
+            {
+              "id": "storage",
+              "label": "Storage (GB)",
+              "description": "Amount of total storage in gigabytes.",
+              "dataType": {
+                "type": "primitive",
+                "typeId": "INTEGER"
+              },
+              "displayAdvice": null,
+              "orderIndex": null,
+              "permissibleValues": null,
+              "state": {
+                "dependencies": [],
+                "facets": [
+                  {
+                    "type": "maxValue",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "integer",
+                        "value": 200
+                      }
+                    }
+                  },
+                  {
+                    "type": "readOnly",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "boolean",
+                        "value": true
+                      }
+                    }
+                  },
+                  {
+                    "type": "defaultValue",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "integer",
+                        "value": 0
+                      }
+                    }
+                  },
+                  {
+                    "type": "minValue",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "integer",
+                        "value": 0
+                      }
+                    }
+                  }
+                ]
+              },
+              "isMultiValued": false,
+              "columns": null
+            },
+            {
+              "id": "ENV",
+              "label": "Environment",
+              "description": "Set Environment type : 0 for PROD, 1 for UAT, 2 for DEV, 3 for TEST",
+              "dataType": {
+                "type": "primitive",
+                "typeId": "STRING"
+              },
+              "displayAdvice": "DROPDOWN",
+              "orderIndex": null,
+              "permissibleValues": {
+                "type": "static",
+                "customAllowed": false,
+                "values": [
+                  {
+                    "underlyingValue": {
+                      "type": "string",
+                      "value": "0"
+                    },
+                    "label": "PROD"
+                  },
+                  {
+                    "underlyingValue": {
+                      "type": "string",
+                      "value": "1"
+                    },
+                    "label": "UAT"
+                  },
+                  {
+                    "underlyingValue": {
+                      "type": "string",
+                      "value": "2"
+                    },
+                    "label": "DEV"
+                  },
+                  {
+                    "underlyingValue": {
+                      "type": "string",
+                      "value": "3"
+                    },
+                    "label": "TEST"
+                  }
+                ]
+              },
+              "state": {
+                "dependencies": [],
+                "facets": [
+                  {
+                    "type": "mandatory",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "boolean",
+                        "value": true
+                      }
+                    }
+                  },
+                  {
+                    "type": "defaultValue",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "string",
+                        "value": "0"
+                      }
+                    }
+                  },
+                  {
+                    "type": "visible",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "boolean",
+                        "value": true
+                      }
+                    }
+                  },
+                  {
+                    "type": "encrypted",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "boolean",
+                        "value": false
+                      }
+                    }
+                  }
+                ]
+              },
+              "isMultiValued": false,
+              "columns": null
+            },
+            {
+              "id": "source_machine_name",
+              "label": "Clone from name",
+              "description": "The source virtual machine name to clone from. source_machine is an entityref where we specify the id of the machine we are cloning from. source_machine will take higher priority and will overwrite the value specified by source_machine_name. Empty Guid will throw an exception and will not result in another query based on name. Only when __clonefromId is not specified we will query by __clonefrom",
+              "dataType": {
+                "type": "primitive",
+                "typeId": "STRING"
+              },
+              "displayAdvice": null,
+              "orderIndex": null,
+              "permissibleValues": null,
+              "state": {
+                "dependencies": [],
+                "facets": [
+                  {
+                    "type": "visible",
+                    "value": {
+                      "type": "constantClause",
+                      "value": {
+                        "type": "boolean",
+                        "value": false
+                      }
+                    }
+                  }
+                ]
+              },
+              "isMultiValued": false,
+              "columns": null
+            },
+            {
+              "id": "slx.ad.group.users",
+              "label": null,
+              "description": null,
+              "dataType": {
+                "type": "primitive",
+                "typeId": "STRING"
+              },
+              "displayAdvice": null,
+              "orderIndex": null,
+              "permissibleValues": null,
+              "state": {
+                "dependencies": [],
+                "facets": [
+                  {
+                    "type": "mandatory",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "boolean",
+                        "value": false
+                      }
+                    }
+                  },
+                  {
+                    "type": "defaultValue",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "string",
+                        "value": "CN=VRA Users,OU=Groups,OU=IT,DC=sli,DC=local"
+                      }
+                    }
+                  },
+                  {
+                    "type": "visible",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "boolean",
+                        "value": false
+                      }
+                    }
+                  },
+                  {
+                    "type": "encrypted",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "boolean",
+                        "value": false
+                      }
+                    }
+                  }
+                ]
+              },
+              "isMultiValued": false,
+              "columns": null
+            },
+            {
+              "id": "guest_customization_specification",
+              "label": "Customization spec",
+              "description": "Name of the guest customization spec to use to customize the vm post initial clone. Network (IP) related info is super-imposed on top of spec retrieved by this name.",
+              "dataType": {
+                "type": "primitive",
+                "typeId": "STRING"
+              },
+              "displayAdvice": null,
+              "orderIndex": null,
+              "permissibleValues": null,
+              "state": {
+                "dependencies": [],
+                "facets": [
+                  {
+                    "type": "visible",
+                    "value": {
+                      "type": "constantClause",
+                      "value": {
+                        "type": "boolean",
+                        "value": false
+                      }
+                    }
+                  },
+                  {
+                    "type": "readOnly",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "boolean",
+                        "value": true
+                      }
+                    }
+                  },
+                  {
+                    "type": "defaultValue",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "string",
+                        "value": "Windows DHCP"
+                      }
+                    }
+                  }
+                ]
+              },
+              "isMultiValued": false,
+              "columns": null
+            },
+            {
+              "id": "_hasChildren",
+              "label": "Has Children",
+              "description": "Indicates if current component is serving as a container to other components in the blueprint.",
+              "dataType": {
+                "type": "primitive",
+                "typeId": "BOOLEAN"
+              },
+              "displayAdvice": null,
+              "orderIndex": null,
+              "permissibleValues": null,
+              "state": {
+                "dependencies": [],
+                "facets": [
+                  {
+                    "type": "visible",
+                    "value": {
+                      "type": "constantClause",
+                      "value": {
+                        "type": "boolean",
+                        "value": false
+                      }
+                    }
+                  },
+                  {
+                    "type": "defaultValue",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "boolean",
+                        "value": false
+                      }
+                    }
+                  }
+                ]
+              },
+              "isMultiValued": false,
+              "columns": null
+            },
+            {
+              "id": "os_distribution",
+              "label": "OS distribution",
+              "description": "The host Operating System (OS) distribution. Examples of valid values for an os_type of Linux include",
+              "dataType": {
+                "type": "primitive",
+                "typeId": "STRING"
+              },
+              "displayAdvice": null,
+              "orderIndex": null,
+              "permissibleValues": null,
+              "state": {
+                "dependencies": [],
+                "facets": []
+              },
+              "isMultiValued": false,
+              "columns": null
+            },
+            {
+              "id": "max_network_adapters",
+              "label": "Maximum network adapters",
+              "description": "The maximum number of network adapters a user can select for provisioned machines. For unlimited leave blank.",
+              "dataType": {
+                "type": "primitive",
+                "typeId": "INTEGER"
+              },
+              "displayAdvice": null,
+              "orderIndex": null,
+              "permissibleValues": null,
+              "state": {
+                "dependencies": [],
+                "facets": [
+                  {
+                    "type": "minValue",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "integer",
+                        "value": -1
+                      }
+                    }
+                  },
+                  {
+                    "type": "defaultValue",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "integer",
+                        "value": -1
+                      }
+                    }
+                  }
+                ]
+              },
+              "isMultiValued": false,
+              "columns": null
+            },
+            {
+              "id": "platform_name",
+              "label": "Platform name",
+              "description": "Name of the platform for this host, which is vSphere.",
+              "dataType": {
+                "type": "primitive",
+                "typeId": "STRING"
+              },
+              "displayAdvice": null,
+              "orderIndex": null,
+              "permissibleValues": null,
+              "state": {
+                "dependencies": [],
+                "facets": [
+                  {
+                    "type": "visible",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "boolean",
+                        "value": false
+                      }
+                    }
+                  },
+                  {
+                    "type": "derivedValue",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "string",
+                        "value": "vsphere"
+                      }
+                    }
+                  }
+                ]
+              },
+              "isMultiValued": false,
+              "columns": null
+            },
+            {
+              "id": "max_per_user",
+              "label": "Maximum per user",
+              "description": "The maximum number of machines per user. For unlimited leave blank.",
+              "dataType": {
+                "type": "primitive",
+                "typeId": "INTEGER"
+              },
+              "displayAdvice": null,
+              "orderIndex": null,
+              "permissibleValues": null,
+              "state": {
+                "dependencies": [],
+                "facets": [
+                  {
+                    "type": "minValue",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "integer",
+                        "value": 0
+                      }
+                    }
+                  },
+                  {
+                    "type": "defaultValue",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "integer",
+                        "value": 0
+                      }
+                    }
+                  }
+                ]
+              },
+              "isMultiValued": false,
+              "columns": null
+            },
+            {
+              "id": "nics",
+              "label": "Nics",
+              "description": "The list of external network profiles that are part of the Machine. Adding an element to this list adds a network profile associated to this machine.",
+              "dataType": {
+                "type": "complex",
+                "componentTypeId": "com.vmware.csp.iaas.blueprint.service",
+                "componentId": null,
+                "classId": "Infrastructure.Compute.Machine.Nic",
+                "typeFilter": null,
+                "label": null,
+                "schema": {
+                  "fields": [
+                    {
+                      "id": "external_address",
+                      "label": "External Address",
+                      "description": "The static IP Address from the IP range in the Network profile",
+                      "dataType": {
+                        "type": "primitive",
+                        "typeId": "STRING"
+                      },
+                      "displayAdvice": null,
+                      "orderIndex": null,
+                      "permissibleValues": null,
+                      "state": {
+                        "dependencies": [],
+                        "facets": [
+                          {
+                            "type": "editable",
+                            "value": {
+                              "type": "constant",
+                              "value": {
+                                "type": "boolean",
+                                "value": false
+                              }
+                            }
+                          },
+                          {
+                            "type": "defaultValue",
+                            "value": {
+                              "type": "constant",
+                              "value": {
+                                "type": "string",
+                                "value": ""
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      "isMultiValued": false,
+                      "columns": null
+                    },
+                    {
+                      "id": "address",
+                      "label": "Address",
+                      "description": "The static IP Address from the IP range in the Network profile",
+                      "dataType": {
+                        "type": "primitive",
+                        "typeId": "STRING"
+                      },
+                      "displayAdvice": null,
+                      "orderIndex": null,
+                      "permissibleValues": null,
+                      "state": {
+                        "dependencies": [],
+                        "facets": [
+                          {
+                            "type": "defaultValue",
+                            "value": {
+                              "type": "constant",
+                              "value": {
+                                "type": "string",
+                                "value": ""
+                              }
+                            }
+                          },
+                          {
+                            "type": "mandatory",
+                            "value": {
+                              "type": "expression",
+                              "operator": {
+                                "type": "equals"
+                              },
+                              "leftOperand": {
+                                "type": "path",
+                                "path": "vSphere__vCenter__Machine_1~assignment_type"
+                              },
+                              "rightOperand": {
+                                "type": "constant",
+                                "value": {
+                                  "type": "string",
+                                  "value": "Static"
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      "isMultiValued": false,
+                      "columns": null
+                    },
+                    {
+                      "id": "assignment_type",
+                      "label": "Assignment Type",
+                      "description": "The assignment of the network profile with the IP range. Examples of valid values include",
+                      "dataType": {
+                        "type": "primitive",
+                        "typeId": "STRING"
+                      },
+                      "displayAdvice": "DROPDOWN",
+                      "orderIndex": null,
+                      "permissibleValues": {
+                        "type": "static",
+                        "customAllowed": false,
+                        "values": [
+                          {
+                            "underlyingValue": {
+                              "type": "string",
+                              "value": "Static"
+                            },
+                            "label": "Static IP"
+                          },
+                          {
+                            "underlyingValue": {
+                              "type": "string",
+                              "value": "DHCP"
+                            },
+                            "label": "DHCP"
+                          }
+                        ]
+                      },
+                      "state": {
+                        "dependencies": [],
+                        "facets": [
+                          {
+                            "type": "defaultValue",
+                            "value": {
+                              "type": "constant",
+                              "value": {
+                                "type": "string",
+                                "value": "Static"
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      "isMultiValued": false,
+                      "columns": null
+                    },
+                    {
+                      "id": "network_profile",
+                      "label": "Network Profile",
+                      "description": "The network profile information identifies the network profile and specifies settings for an existing network.",
+                      "dataType": {
+                        "type": "primitive",
+                        "typeId": "STRING"
+                      },
+                      "displayAdvice": "DROPDOWN",
+                      "orderIndex": null,
+                      "permissibleValues": {
+                        "type": "dynamic",
+                        "customAllowed": false,
+                        "context": null,
+                        "dependencies": []
+                      },
+                      "state": {
+                        "dependencies": [],
+                        "facets": []
+                      },
+                      "isMultiValued": false,
+                      "columns": null
+                    },
+                    {
+                      "id": "id",
+                      "label": "Index",
+                      "description": "Index of the NIC.",
+                      "dataType": {
+                        "type": "primitive",
+                        "typeId": "INTEGER"
+                      },
+                      "displayAdvice": null,
+                      "orderIndex": null,
+                      "permissibleValues": null,
+                      "state": {
+                        "dependencies": [],
+                        "facets": []
+                      },
+                      "isMultiValued": false,
+                      "columns": null
+                    },
+                    {
+                      "id": "network",
+                      "label": "Network",
+                      "description": "Network selected from networks available in the blueprint.",
+                      "dataType": {
+                        "type": "ref",
+                        "componentTypeId": "com.vmware.csp.component.network.service",
+                        "componentId": null,
+                        "classId": "Infrastructure.Network.Network",
+                        "typeFilter": null,
+                        "label": "{com.vmware.csp.component.iaas.proxy.provider@Infrastructure.Compute.Machine.Nic.label.network}"
+                      },
+                      "displayAdvice": null,
+                      "orderIndex": null,
+                      "permissibleValues": {
+                        "type": "dynamic",
+                        "customAllowed": false,
+                        "context": null,
+                        "dependencies": []
+                      },
+                      "state": {
+                        "dependencies": [],
+                        "facets": [
+                          {
+                            "type": "visible",
+                            "value": {
+                              "type": "constant",
+                              "value": {
+                                "type": "boolean",
+                                "value": false
+                              }
+                            }
+                          },
+                          {
+                            "type": "mandatory",
+                            "value": {
+                              "type": "constant",
+                              "value": {
+                                "type": "boolean",
+                                "value": false
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      "isMultiValued": false,
+                      "columns": null
+                    },
+                    {
+                      "id": "load_balancing",
+                      "label": "Load Balancing",
+                      "description": "The Load Balancer to distribute traffic among multiple instances of the vRA",
+                      "dataType": {
+                        "type": "primitive",
+                        "typeId": "STRING"
+                      },
+                      "displayAdvice": null,
+                      "orderIndex": null,
+                      "permissibleValues": null,
+                      "state": {
+                        "dependencies": [],
+                        "facets": []
+                      },
+                      "isMultiValued": false,
+                      "columns": null
+                    }
+                  ]
+                }
+              },
+              "displayAdvice": "DATA_TABLE",
+              "orderIndex": null,
+              "permissibleValues": null,
+              "state": {
+                "dependencies": [],
+                "facets": [
+                  {
+                    "type": "visible",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "boolean",
+                        "value": false
+                      }
+                    }
+                  },
+                  {
+                    "type": "defaultValue",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "multiple",
+                        "elementTypeId": "COMPLEX",
+                        "items": []
+                      }
+                    }
+                  }
+                ]
+              },
+              "isMultiValued": true,
+              "columns": null
+            },
+            {
+              "id": "display_location",
+              "label": "Display location on request?",
+              "description": "Should the user be able to select a provisioning location when making a request",
+              "dataType": {
+                "type": "primitive",
+                "typeId": "BOOLEAN"
+              },
+              "displayAdvice": "CHECKBOX",
+              "orderIndex": null,
+              "permissibleValues": null,
+              "state": {
+                "dependencies": [],
+                "facets": [
+                  {
+                    "type": "defaultValue",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "boolean",
+                        "value": false
+                      }
+                    }
+                  }
+                ]
+              },
+              "isMultiValued": false,
+              "columns": null
+            },
+            {
+              "id": "Custom.SetCustomHostname.Execute",
+              "label": null,
+              "description": null,
+              "dataType": {
+                "type": "primitive",
+                "typeId": "STRING"
+              },
+              "displayAdvice": null,
+              "orderIndex": null,
+              "permissibleValues": null,
+              "state": {
+                "dependencies": [],
+                "facets": [
+                  {
+                    "type": "mandatory",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "boolean",
+                        "value": false
+                      }
+                    }
+                  },
+                  {
+                    "type": "defaultValue",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "string",
+                        "value": "true"
+                      }
+                    }
+                  },
+                  {
+                    "type": "visible",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "boolean",
+                        "value": false
+                      }
+                    }
+                  },
+                  {
+                    "type": "encrypted",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "boolean",
+                        "value": false
+                      }
+                    }
+                  }
+                ]
+              },
+              "isMultiValued": false,
+              "columns": null
+            },
+            {
+              "id": "FUNC",
+              "label": "Function",
+              "description": "Function short name (between 3 and 5 characters) ",
+              "dataType": {
+                "type": "primitive",
+                "typeId": "STRING"
+              },
+              "displayAdvice": "TEXTBOX",
+              "orderIndex": null,
+              "permissibleValues": null,
+              "state": {
+                "dependencies": [],
+                "facets": [
+                  {
+                    "type": "regex",
+                    "errorMessage": null,
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "string",
+                        "value": "[A-Za-z0-9]{3,5}"
+                      }
+                    }
+                  },
+                  {
+                    "type": "mandatory",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "boolean",
+                        "value": true
+                      }
+                    }
+                  },
+                  {
+                    "type": "defaultValue",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "string",
+                        "value": ""
+                      }
+                    }
+                  },
+                  {
+                    "type": "visible",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "boolean",
+                        "value": true
+                      }
+                    }
+                  },
+                  {
+                    "type": "encrypted",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "boolean",
+                        "value": false
+                      }
+                    }
+                  }
+                ]
+              },
+              "isMultiValued": false,
+              "columns": null
+            },
+            {
+              "id": "os_version",
+              "label": "OS version",
+              "description": "The host Operating System version.",
+              "dataType": {
+                "type": "primitive",
+                "typeId": "STRING"
+              },
+              "displayAdvice": null,
+              "orderIndex": null,
+              "permissibleValues": null,
+              "state": {
+                "dependencies": [],
+                "facets": []
+              },
+              "isMultiValued": false,
+              "columns": null
+            },
+            {
+              "id": "VirtualMachine.Software0.ScriptPath",
+              "label": null,
+              "description": null,
+              "dataType": {
+                "type": "primitive",
+                "typeId": "STRING"
+              },
+              "displayAdvice": null,
+              "orderIndex": null,
+              "permissibleValues": null,
+              "state": {
+                "dependencies": [],
+                "facets": [
+                  {
+                    "type": "mandatory",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "boolean",
+                        "value": false
+                      }
+                    }
+                  },
+                  {
+                    "type": "defaultValue",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "string",
+                        "value": "C:\\VRMGuestAgent\\site\\slxScript\\script01.bat"
+                      }
+                    }
+                  },
+                  {
+                    "type": "visible",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "boolean",
+                        "value": false
+                      }
+                    }
+                  },
+                  {
+                    "type": "encrypted",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "boolean",
+                        "value": false
+                      }
+                    }
+                  }
+                ]
+              },
+              "isMultiValued": false,
+              "columns": null
+            },
+            {
+              "id": "ovf_url_username",
+              "label": "Username",
+              "description": null,
+              "dataType": {
+                "type": "primitive",
+                "typeId": "STRING"
+              },
+              "displayAdvice": "TEXTBOX",
+              "orderIndex": 6,
+              "permissibleValues": null,
+              "state": {
+                "dependencies": [],
+                "facets": [
+                  {
+                    "type": "visible",
+                    "value": {
+                      "type": "constantClause",
+                      "value": {
+                        "type": "boolean",
+                        "value": false
+                      }
+                    }
+                  }
+                ]
+              },
+              "isMultiValued": false,
+              "columns": null
+            },
+            {
+              "id": "ovf_url",
+              "label": "URL",
+              "description": "This is the location at which the OVF / OVA file is present. The URL should be specified in the form http(s)://url-location/file.(ovf/ova)",
+              "dataType": {
+                "type": "primitive",
+                "typeId": "STRING"
+              },
+              "displayAdvice": null,
+              "orderIndex": 4,
+              "permissibleValues": null,
+              "state": {
+                "dependencies": [],
+                "facets": [
+                  {
+                    "type": "visible",
+                    "value": {
+                      "type": "constantClause",
+                      "value": {
+                        "type": "boolean",
+                        "value": false
+                      }
+                    }
+                  }
+                ]
+              },
+              "isMultiValued": false,
+              "columns": null
+            },
+            {
+              "id": "VirtualMachine.Customize.WaitComplete",
+              "label": null,
+              "description": null,
+              "dataType": {
+                "type": "primitive",
+                "typeId": "STRING"
+              },
+              "displayAdvice": null,
+              "orderIndex": null,
+              "permissibleValues": null,
+              "state": {
+                "dependencies": [],
+                "facets": [
+                  {
+                    "type": "mandatory",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "boolean",
+                        "value": false
+                      }
+                    }
+                  },
+                  {
+                    "type": "defaultValue",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "string",
+                        "value": "True"
+                      }
+                    }
+                  },
+                  {
+                    "type": "visible",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "boolean",
+                        "value": false
+                      }
+                    }
+                  },
+                  {
+                    "type": "encrypted",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "boolean",
+                        "value": false
+                      }
+                    }
+                  }
+                ]
+              },
+              "isMultiValued": false,
+              "columns": null
+            },
+            {
+              "id": "source_machine_external_snapshot",
+              "label": "Clone from snapshot External Snapshot Id",
+              "description": "A specific snapshot of the specified source virtual machine to clone from. This is used when linked clone is specified. For linked clone when this is not specified a default such as current snapshot is used.",
+              "dataType": {
+                "type": "primitive",
+                "typeId": "INTEGER"
+              },
+              "displayAdvice": "DROPDOWN",
+              "orderIndex": null,
+              "permissibleValues": null,
+              "state": {
+                "dependencies": [],
+                "facets": [
+                  {
+                    "type": "visible",
+                    "value": {
+                      "type": "expression",
+                      "operator": {
+                        "type": "contains"
+                      },
+                      "leftOperand": {
+                        "type": "path",
+                        "path": "vSphere__vCenter__Machine_1~action"
+                      },
+                      "rightOperand": {
+                        "type": "constant",
+                        "value": {
+                          "type": "string",
+                          "value": "Linked"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "type": "nullDisplayText",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "string",
+                        "value": "(Leave blank to use current snapshot)"
+                      }
+                    }
+                  },
+                  {
+                    "type": "mandatory",
+                    "value": {
+                      "type": "constant",
+                      "value": {
+                        "type": "boolean",
+                        "value": false
+                      }
+                    }
+                  }
+                ]
+              },
+              "isMultiValued": false,
+              "columns": null
+            }
+          ]
+        }
+      },
+      "displayAdvice": null,
+      "orderIndex": null,
+      "permissibleValues": null,
+      "state": {
+        "dependencies": [],
+        "facets": [
+          {
+            "type": "defaultValue",
+            "value": {
+              "type": "constant",
+              "value": {
+                "type": "complex",
+                "componentTypeId": "com.vmware.csp.component.cafe.composition",
+                "componentId": null,
+                "classId": "Blueprint.Component.Declaration",
+                "typeFilter": "WindowsWorkstation*vSphere__vCenter__Machine_1",
+                "values": {
+                  "entries": []
+                }
+              }
+            }
+          }
+        ]
+      },
+      "isMultiValued": false,
+      "columns": null
+    },
+    {
+      "id": "_number_of_instances",
+      "label": "Number of Deployments",
+      "description": "Indicates the number of deployments to be provisioned from the blueprint.",
+      "dataType": {
+        "type": "primitive",
+        "typeId": "INTEGER"
+      },
+      "displayAdvice": null,
+      "orderIndex": null,
+      "permissibleValues": null,
+      "state": {
+        "dependencies": [],
+        "facets": [
+          {
+            "type": "maxValue",
+            "value": {
+              "type": "constant",
+              "value": {
+                "type": "integer",
+                "value": 1
+              }
+            }
+          },
+          {
+            "type": "defaultValue",
+            "value": {
+              "type": "constant",
+              "value": {
+                "type": "integer",
+                "value": 1
+              }
+            }
+          },
+          {
+            "type": "visible",
+            "value": {
+              "type": "constantClause",
+              "value": {
+                "type": "boolean",
+                "value": true
+              }
+            }
+          },
+          {
+            "type": "minValue",
+            "value": {
+              "type": "constant",
+              "value": {
+                "type": "integer",
+                "value": 1
+              }
+            }
+          }
+        ]
+      },
+      "isMultiValued": false,
+      "columns": null
+    }
+  ]
+}
+                            
